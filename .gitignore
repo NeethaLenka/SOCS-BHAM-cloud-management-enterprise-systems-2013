@@ -5,6 +5,8 @@
 *.war
 *.ear
 *.iml
-/.idea
+.idea/*
+bin/*
+*.classpath
 .DS_STORE
 
