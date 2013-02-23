@@ -1,4 +1,4 @@
-package main.ES2.facts;
+package EnterpriseSystems.CloudManager.Model;
 
 import java.util.ArrayList;
 
@@ -106,7 +106,7 @@ public class Blade {
 	
 	public void AddVM(VM vm){
 		if(vmList == null){
-			vmList = new ArrayList<>();
+			vmList = new ArrayList<VM>();
 		}
 		vmList.add(vm);
 	}

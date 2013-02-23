@@ -1,4 +1,4 @@
-package main.ES2.facts;
+package EnterpriseSystems.CloudManager.Model;
 
 // class for virtual machines
 
