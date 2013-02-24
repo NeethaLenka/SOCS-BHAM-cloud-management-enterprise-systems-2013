@@ -21,7 +21,7 @@ import static org.drools.io.ResourceFactory.newClassPathResource;
  * Time: 16:08
  * To change this template use File | Settings | File Templates.
  */
-public class DroolsInit {
+public class DroolsConfiguration {
 
     public void Init() {
         KnowledgeBuilder kbuilder = KnowledgeBuilderFactory.newKnowledgeBuilder();
