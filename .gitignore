@@ -9,4 +9,7 @@
 /target/*
 /target
 .DS_STORE
+.classpath
+.project
+.settings/*
 
