@@ -1,0 +1,10 @@
+package EnterpriseSystems.CloudManager.Rules;
+import EnterpriseSystems.CloudManager.Model.*
+
+dialect  "mvel"
+
+rule "energy"
+    when Blade()
+    then
+    System.out.println("hi");
+end

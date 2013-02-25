@@ -1,7 +1,0 @@
-package EnterpriseSystems.CloudManager.Rules;
-dialect  "mvel"
-
-rule "energy"
-    when
-    then
-end

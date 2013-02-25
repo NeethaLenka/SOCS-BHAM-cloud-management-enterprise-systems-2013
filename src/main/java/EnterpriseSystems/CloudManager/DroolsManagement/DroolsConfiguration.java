@@ -8,6 +8,7 @@ import org.drools.builder.KnowledgeBuilderFactory;
 import org.drools.conf.EventProcessingOption;
 import org.drools.runtime.StatefulKnowledgeSession;
 
+import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -23,6 +24,8 @@ import static org.drools.io.ResourceFactory.newClassPathResource;
  */
 public class DroolsConfiguration {
 
+    private StatefulKnowledgeSession knowledgeSession;
+
     public void Init() {
         KnowledgeBuilder kbuilder = KnowledgeBuilderFactory.newKnowledgeBuilder();
 
@@ -36,9 +39,21 @@ public class DroolsConfiguration {
         config.setOption( EventProcessingOption.STREAM );
         KnowledgeBase kbase = KnowledgeBaseFactory.newKnowledgeBase( config );
         kbase.addKnowledgePackages( kbuilder.getKnowledgePackages() );
-        StatefulKnowledgeSession knowledgeSession = kbase.newStatefulKnowledgeSession();
+        knowledgeSession = kbase.newStatefulKnowledgeSession();
 
         runKnowledgeSession(knowledgeSession);
+
+    }
+
+    public void addToEngine(Object obj) {
+        knowledgeSession.insert(obj);
+    }
+
+    public void addToEngine(List<Object> objs) {
+
+        for (Object obj : objs)
+            knowledgeSession.insert(obj);
+
     }
 
     private void runKnowledgeSession(StatefulKnowledgeSession ksession) {
