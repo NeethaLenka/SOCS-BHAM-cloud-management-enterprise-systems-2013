@@ -39,9 +39,6 @@ public class VM {
 		this.networkUsage_maximum = networkUsage_maximum;
 	}
 
-    public VM() {
-    }
-
     public Long getID() {
 		return ID;
 	}
