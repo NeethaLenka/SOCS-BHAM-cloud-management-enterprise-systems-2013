@@ -21,7 +21,10 @@ public class VM {
 	private double networkUsage_current;
 	
 	private double networkUsage_maximum;
-	
+
+	public VM(){
+	}
+
 	//constructor including all fields
 	public VM(Long ID,double memoryUsage_current, double memoryUsage_maximum, double cpuUsage_current, double cpuUsage_maximum,
 			double diskUsage_current, double diskUsage_maximum, double networkUsage_current, double networkUsage_maximum){
